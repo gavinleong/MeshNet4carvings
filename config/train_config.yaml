@@ -1,0 +1,17 @@
+# CUDA
+cuda_devices: '0'   # multi-gpu training is available
+
+# dataset
+dataset:
+
+  data_root: 'XXXXXXXXXXXXXX'
+  augment_data: true
+  max_faces: 1024
+
+# MeshNet
+MeshNet:
+  structural_descriptor:
+    num_kernel: 64
+    sigma: 0.2
+  mesh_convolution:
+    aggregation_method: 'Concat'  # Concat/Max/Average

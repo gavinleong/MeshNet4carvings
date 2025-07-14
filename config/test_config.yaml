@@ -1,0 +1,16 @@
+# CUDA
+cuda_devices: '0'
+
+# dataset
+dataset:
+  data_root: 'XXXXXXXXXXXXX'
+  augment_data: false
+  max_faces: 1024
+
+# MeshNet
+MeshNet:
+  structural_descriptor:
+    num_kernel: 64
+    sigma: 0.2
+  mesh_convolution:
+    aggregation_method: 'Concat'  # Concat/Max/Average
