@@ -17,13 +17,15 @@ To deploy the MeshNet carving recognition method on a rock carving site requires
 
 Modifications made to the base MeshNet script:
 
-a. In MeshNet4carvings.py AdamW optimiser used instead of stochastic gradient descent 
+1. In MeshNet4carvings.py AdamW optimiser used instead of stochastic gradient descent 
 
-b. In MeshNet4carvings.py train and testing combined into one script to run grid search over hyperparameters
+2. In MeshNet4carvings.py train and testing combined into one script to run grid search over hyperparameters
 
-c. In preprocess.py, removes limit of max faces = 500
+3. In MeshNet4carvings.py added F-score, precision, and recall to the metrics
 
-d. In ModelNet40.py, removed labels in type_to_index_map to be recognition-oriented rather than classification-oriented
+4. In preprocess.py, removes limit of max faces = 500
+
+5. In ModelNet40.py, removed labels in type_to_index_map to be recognition-oriented rather than classification-oriented
 
 
 [1] S. Song, J. Xiao, Sliding Shapes for 3D Object Detection in Depth Images, in: Comput. Vision–ECCV 2014 13th Eur. Conf., Zurich, 2014: pp. 634–651. https://doi.org/10.1007/978-3-319-10599-4_41.
