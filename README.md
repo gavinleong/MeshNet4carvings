@@ -15,6 +15,17 @@ To deploy the MeshNet carving recognition method on a rock carving site requires
 
 6.	Test the trained MeshNet on the test dataset. The accuracy of MeshNet on the test dataset should be like that for the training dataset.
 
+Modifications made to the base MeshNet script:
+
+a. In MeshNet4carvings.py AdamW optimiser used instead of stochastic gradient descent 
+
+b. In MeshNet4carvings.py train and testing combined into one script to run grid search over hyperparameters
+
+c. In preprocess.py, removes limit of max faces = 500
+
+d. In ModelNet40.py, removed labels in type_to_index_map to be recognition-oriented rather than classification-oriented
+
+
 [1] S. Song, J. Xiao, Sliding Shapes for 3D Object Detection in Depth Images, in: Comput. Vision–ECCV 2014 13th Eur. Conf., Zurich, 2014: pp. 634–651. https://doi.org/10.1007/978-3-319-10599-4_41.
 
 [2]	P.F. Felzenszwalb, R.B. Girshick, D. McAllester, D. Ramanan, Object Detection with Discriminatively Trained Part-Based Models, IEEE Trans. Pattern Anal. Mach. Intell. 32 (2010) 1627–1645. https://doi.org/10.1109/TPAMI.2009.167.
